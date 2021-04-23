@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #590206;
+  opacity: 0.9;
+}
+
+.logo {
+  color: antiquewhite;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+ul li {
+  list-style: none;
+}
+
+li a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  padding: 5px;
+  background-color: #260101;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: antiquewhite;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* welcome PAGE */
+
+#welcome-section {
+  display: flex;
+  /*background: url("images/hao.jpg"); */
+  height: 100vh;
+  color: antiquewhite;
+  min-height: 500px;
+  background: rgba(0, 0, 0, 0.632);
+}
+
+.welcome-content {
+  margin: auto 0 auto 40px;
+}
+
+.welcome-content .welcome-lg-heading {
+  font-size: 70px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.welcome-content .welcome-sm-heading {
+  font-size: 27px;
+  font-weight: 50;
+}
+.text-secondary {
+  color: #c6a3a3;
+}
+
+.icons {
+  margin-top: 1rem;
+}
+
+.icons a {
+  padding: 0.4rem;
+  color: antiquewhite;
+}
+
+.icons a:hover {
+  color: #c6a3a3;
+}
+
+/* ABOUT PAGE */
+
+/* heading text */
+.lg-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #590212;
+}
+
+.about-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.about-info .bio-image {
+  border-radius: 50%;
+  border: #260101 3px solid;
+
+  margin-left: 30px;
+}
+
+.bio {
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+
+.job {
+  padding: 01.5rem;
+
+  margin: 10px;
+  text-align: center;
+}
+.job h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #590212;
+  margin-bottom: 10px;
+}
+
+.job h6 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* --------------- projects page --------------- */
+
+.project-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #d6556c;
+  letter-spacing: 3px;
+  font-size: 44px;
+  margin-bottom: -20px;
+  font-weight: 600;
+}
+
+.projects-sm-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #590212;
+  letter-spacing: 3px;
+}
+.projects-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+.projects-content img {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.projects-content img:hover {
+  opacity: 0.5;
+  border-color: #c6a3a3;
+}
+
+/* button style */
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 3px black solid;
+  margin-bottom: 0.3rem;
+}
+.btn:hover {
+  background: #aeaeae;
+  color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #navbar {
+    opacity: 0.9;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #590212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5 ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+
+  /* Rottate burger button */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /* Animation for navbar */
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .bio {
+    margin: 20px;
+  }
+
+  .projects-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* This media for about page (mobile first) */
+
+@media (min-width: 600px) {
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .about-info {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .projects-content {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .bio {
+    grid-column: 2/4;
+  }
+}
