@@ -1,4 +1,4 @@
-# web-programmer-portfolio
+# Web-programmer-portfolio
 
 This project is part of freeCodeCamp course for responsive web design 
 
